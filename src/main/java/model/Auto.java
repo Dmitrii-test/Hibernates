@@ -8,11 +8,7 @@ public class Auto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
-    @Column (name = "model")
     private String model;
-
-    //можно не указывать Column name, если оно совпадает с названием столбца в таблице
     private String color;
 
 
@@ -20,6 +16,7 @@ public class Auto {
     @JoinColumn(name = "user_id")
     private User user;
 
+    // Entity должен иметь пустой констуктор
     public Auto() {
     }
 
