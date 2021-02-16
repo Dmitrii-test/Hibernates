@@ -14,6 +14,13 @@ public class Main {
         ford.setUser(user);
         user.addAuto(ford);
         userService.updateUser(user);
+        user.setName("Sasha");
+        User user1 = new User("Павел", 30);
+        userService.saveUser(user1);
+        ford.setUser(user1);
+        user1.addAuto(ford);
+        userService.updateUser(user);
+        //userService.deleteUser(user);
 
     }
 }
